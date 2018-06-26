@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.service;
 
-import ru.Javabegin.FastJava.Shop3.bank.BaseBank;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.bank.BaseBank;
 
 public class Banker extends BaseEmployee {
 

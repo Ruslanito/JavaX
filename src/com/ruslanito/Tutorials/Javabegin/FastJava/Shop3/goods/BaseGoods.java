@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.goods;
 
-import ru.Javabegin.FastJava.Shop3.department.BaseDepartment;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.department.BaseDepartment;
 
 public class BaseGoods {
 	private double price;//стоимость товара

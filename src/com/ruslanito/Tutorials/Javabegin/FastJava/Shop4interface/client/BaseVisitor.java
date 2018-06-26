@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.client;
 
-import ru.Javabegin.FastJava.Shop4interface.interfaces.VisitorInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.VisitorInterface;
 
 public abstract class BaseVisitor implements VisitorInterface {
 

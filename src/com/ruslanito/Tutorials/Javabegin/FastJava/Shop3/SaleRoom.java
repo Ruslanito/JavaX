@@ -2,9 +2,9 @@ package com.ruslanito.Tutorials.Javabegin.FastJava.Shop3;
 
 import java.util.ArrayList;
 
-import ru.Javabegin.FastJava.Shop3.client.BaseVisitor;
-import ru.Javabegin.FastJava.Shop3.department.BaseDepartment;
-import ru.Javabegin.FastJava.Shop3.service.Administrator;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.client.BaseVisitor;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.department.BaseDepartment;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.service.Administrator;
 
 public class SaleRoom {
 

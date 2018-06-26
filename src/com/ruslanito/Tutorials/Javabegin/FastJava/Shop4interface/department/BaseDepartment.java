@@ -2,9 +2,9 @@ package com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.department;
 
 import java.util.ArrayList;
 
-import ru.Javabegin.FastJava.Shop4interface.interfaces.DepartmentInterface;
-import ru.Javabegin.FastJava.Shop4interface.interfaces.EmployeeInterface;
-import ru.Javabegin.FastJava.Shop4interface.interfaces.GoodsInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.DepartmentInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.EmployeeInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.GoodsInterface;
 
 public abstract class BaseDepartment implements DepartmentInterface {
 	private String name;

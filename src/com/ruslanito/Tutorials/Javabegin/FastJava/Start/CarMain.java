@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Start;
 
-import ru.Javabegin.FastJava.Object.Car;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Object.Car;
 
 /**
  * Created by Ruslanito on 26.02.2017.

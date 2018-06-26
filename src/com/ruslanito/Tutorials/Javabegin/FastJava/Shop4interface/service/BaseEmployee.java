@@ -1,7 +1,7 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.service;
 
-import ru.Javabegin.FastJava.Shop4interface.interfaces.DepartmentInterface;
-import ru.Javabegin.FastJava.Shop4interface.interfaces.EmployeeInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.DepartmentInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.EmployeeInterface;
 
 public abstract class BaseEmployee implements EmployeeInterface {
 	private String name;

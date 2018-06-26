@@ -1,7 +1,7 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Camry.Start;
 
-import ru.Javabegin.FastJava.Camry.Object.Camry30;
-import ru.Javabegin.FastJava.Camry.Object.Camry50;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Camry.Object.Camry30;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Camry.Object.Camry50;
 
 public class Main {
 

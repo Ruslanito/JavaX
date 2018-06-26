@@ -2,8 +2,8 @@ package com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.department;
 
 import java.util.ArrayList;
 
-import ru.Javabegin.FastJava.Shop3.goods.BaseGoods;
-import ru.Javabegin.FastJava.Shop3.service.BaseEmployee;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.goods.BaseGoods;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop3.service.BaseEmployee;
 
 public class BaseDepartment {
 	private String name;

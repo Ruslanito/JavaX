@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.bank;
 
-import ru.Javabegin.FastJava.Shop4interface.interfaces.BankInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.BankInterface;
 
 public abstract class BaseBank implements BankInterface {
 

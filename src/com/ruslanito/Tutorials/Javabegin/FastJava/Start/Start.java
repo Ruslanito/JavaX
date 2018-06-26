@@ -1,6 +1,6 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Start;
 
-import ru.Javabegin.FastJava.Object.House;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Object.House;
 
 /**
  * Created by Ruslanito on 26.02.2017.

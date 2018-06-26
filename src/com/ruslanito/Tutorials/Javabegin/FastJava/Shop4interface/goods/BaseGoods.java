@@ -1,7 +1,10 @@
 package com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.goods;
 
-import ru.Javabegin.FastJava.Shop4interface.department.BaseDepartment;
-import ru.Javabegin.FastJava.Shop4interface.interfaces.GoodsInterface;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.department.BaseDepartment;
+import com.ruslanito.Tutorials.Javabegin.FastJava.Shop4interface.interfaces.GoodsInterface;
+
+//import ru.Javabegin.FastJava.Shop4interface.department.BaseDepartment;
+//import ru.Javabegin.FastJava.Shop4interface.interfaces.GoodsInterface;
 
 public abstract class BaseGoods implements GoodsInterface {
 	private double price;

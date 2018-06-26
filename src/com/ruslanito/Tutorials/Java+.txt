@@ -446,4 +446,6 @@ class Swap4 {
     }
 }
 
-*****
+***** Cоздать исполняемый архив JAR
+В идее сначала идете в File | Project Structure | Artifacts, там создаете новый artifact, jar --> From modules with dependencies.
+Потом Build | Build artifacts - директория out

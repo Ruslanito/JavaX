@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaX_jar</output-path>
+    <root id="archive" name="JavaX.jar">
+      <element id="module-output" name="JavaX" />
+    </root>
+  </artifact>
+</component>

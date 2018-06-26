@@ -1,0 +1,449 @@
+*****Структура языка Java
+Входная последовательность символов
+(все символы из файла *.java):
+1. Comments (коментарии)
+    1а. Однострочные;
+    1б. Многострочные (+ Javadoc).
+2. Whitespaces (пробелы)
+    2а. Пробел (''), Form feed ('\f'), Отступ-табуляция ('\t');
+    2б. Line terminators: LF ('\n'), CR ('\r'), LF CR ('\n\r').
+3. Tokens (лексемы)
+    3а. Reserved words (50 шт):
+        3а1. 'const', 'goto';
+        3a2. Keywords (abstract, continue, for, new, switch, assert, default, if, package, synchronized, boolean,
+        do, private, this, break, double, implements, protected, throw, byte, else, import, public, throws, case, enum,
+        instanceof, return, transient, catch, extends, int, short, try, char, final, interface, static, void, class,
+        finally, long, strictfp, volatile, float, native, super, while.
+    3б. Separators (разделители): () {} [] ; , . ... @ ::
+    3в. Operators (операторы) - с помощью чего записывается алгоритм программы
+        -арифметические + - * / % ++ --;
+        -логические !(not-отрицание) &(and-конъюнкция(и)) |(or-дизъюнкция(или)) ^(xor-исключающий или)
+         &&(сокращённая конъюнкция) ||(сокращённая дезъюнкция);
+        -сравнения == != > < >= <=;
+        -побитовые ~(not-дополнение) & (and- побитовая конъюнкция) |(or-побитовая дезъюнкция)
+          ^(xor-побитовое исключающее или) <<(сдвиг влево) >>(сдвиг вправо) >>>(беззнаковый сдвиг вправо);
+        -присваивания = += -= *= /= %= &= |= ^=;
+        -тернарный ?:
+        = > < ! ~ : -> == >= <= != && || ++ -- + - * / & | ^ % << >> >>> += -+ *= /= &= |= ^= %= <<= >>= >>>=
+    3г. Literals (Литералы)- постоянные значения записанные в программе в читаемой форме: Integer, Floating Point,
+        Boolean, Character, String, Null
+    3д. Identifiers (идентификаторы) - имя присвоеное чему-либо созданое пользователем: Пакет, Класс, Метод, Поле,
+        Аргумент метода, Локальная переменная, Аннотация, Метка, enum
+*****
+
+*****Типы данных в Java
+Тип данных - характеристика переменной или константы, определяющая, какого рода значения хранится в отведенной для неё
+области памяти.
+    1. Primitive (примитивные) - числовые (целые, вещественные), символьные, логические
+    2. Reference (ссылочные) - массивы, классы (в т.ч. String, Date), интерфейсы, перечисления
+1а. Целочисленные типы:
+    byte (8 бит - 1 байт): -128...127;
+    short (16 бит - 2 байта): -32 768...32 767;
+    int (32 бита - 4 айта): -2 147 483 648...2 147 483;
+    long (64 бита - 8 байт): -9 223 372 036 854 775 808...9 223 372 036 854 775 807;
+1б. Вещественные типы:
+    float (32 бита - 4 байта): 3,4е-38...3,4е+38;
+    double (64 бита - 8 байт): 1,7е-308...1,7е+308.
+1в. Символьные (char - 2байта): символы Unicode от 0 до 65536.
+1г. Логические (boolean): True (истина) или False (ложь).
+*****
+
+*****Специальные символы Java (Esc-последовательности).
+    \' - апостроф (single quote);
+    \" - кавычка (double quote);
+    \\ - обратный слэш (backslash);
+    \r - возврат каретки (carriage return);
+    \n - перевод строки (new line);
+    \f - прогон страницы (form feed);
+    \t - табуляция (horizontal tab);
+    \b - забой (backspace)
+    \ddd - код символа в 8-ричной записи (ddd - 8-ричное число)
+    \uhhh - код символа в 16-ричной записи (hhhh - 16-ричное число
+*****
+
+*****String (строки).
+    В Java строки  реализованы в виде класса из пакета java.lang. Класс строк неизменяемый тип классов - класс с методами
+не изменяющие внутреннее состояние объекта, созданного на их основе, а возвращают новый новый экземпляр класса.
+Нкмерация символов строк с 0 (ноль).
+    Количество символов в строке:метод length().
+int a; String s = "Hello World!";
+a=s.length();
+System.out.println("Количество символов в строке равно "+a);
+System.out.println("Количество символов в строке равно "+s.length())
+    Слияние строк: требуют больших затрат системных ресурсов.
+String s1 = "Hello ";
+String s2 = "World!";
+String s3 = s1+s2;
+Создаётся 3 объекта, требующих выделение памяти. Более эффективно класс SrtingBuffer (буфер обмена):
+StringBuffer s = new StringBuffer ();
+s.append("Hello ");
+s.append("World!");
+String s1 = s.toString();
+По умолчанию StringBuffer выделяет память на 16 символов - для увеличения кол-ва символов StringBuffer (105).
+Strin
+    Извлечение части (подстроки) строки: String. substring(). Это метод создаёт новую копию символов исходной строки из
+указанного диапазона. Можно указать: только индекс первого символа - копия от символа и до конца строки или указать
+начальный и конечный (не включая его) символ.
+int start = 6; int end = 11;
+String greetings = "Hello World!";
+String substr = greetings.substring(start, end);
+System.out.println (substr);
+или
+"Hello World!".substring(6) -> "World!"
+"Hello World!".substring(3, 8) -> "lo Wo"
+    Поиск символа или текста: Первое вхождение - indexOF(). Последнее вхождение - lastindexOf (). Эти методы возвращают
+индекс (позицию) первого или последнего искомого символа. При отсутствии элемента: -1. Методы определяющие начало и
+окончание текста определённой строкой: startsWith() и endsWith () - возвращают тип boolean
+int index; boolean index2;
+String s1 = "Hello World!";th ()
+System.out.print("Первое вхождение:");
+index = s1.indexOf("o");
+System.out.println(index); ->4
+System.out.print("Последнее вхождение:");
+index = s1.lastIndexOf("o");
+System.out.println(index); ->7
+System.out.print("Нет элемента:");
+index = s1.indexOf("a");
+System.out.println(index); ->-1
+System.out.print("Первое вхождение текста:");
+index = s1.indexOf("Hello");
+System.out.println(index); ->0
+System.out.print("Текст в начале и в конце:");
+index2 = s1.startsWith("Hello"); ->true
+System.out.println(index2);
+index2 = s1.startsWith("World"); ->false
+System.out.println(index2);
+index2 = s1.endsWith("World!"); ->true
+System.out.println(index2);
+    Извлечение символа или текста: метод chatAt()  с указанием помера позиции
+int a = 6; char c;
+String s = "Hello World!";
+c=s.charAt(a);
+System.out.println("Символ '"+c+"' находится на позиции №"+a);
+String surname = "Иванов";
+String name = "Иван";
+String name2 = "Иванович";
+System.out.println(surname+" "+name.charAt(0)+"."+name2.charAt(0)+"."); -> Иванов И.И.
+    Замена символа в строке: метод replace("a","b") - замена символа 'a' на 'b'
+String s = "Hello World!";
+System.out.println(s); ->Hello World!
+String s1 = s.replace("H","h");
+System.out.println(s1); ->hello World!
+String s2 = s.replace("l","L");
+System.out.println(s2); ->HeLLo WorLd!
+    Замена регистра букв: методы - toLowerCase() И toUpperCase().
+String s = "Hello World!";
+String s1 = s.toLowerCase();
+System.out.println(s1); ->hello world!
+String s2 = s.toUpperCase();
+    Сравнение строк: методы - equals() и equalsIgnoreCase() с учётом и без учёта регистра символов:
+boolean a;String s = "Hello World!";
+System.out.print("С учетом регистра ");
+String s1= s.toLowerCase();
+a=s.equals(s1);
+System.out.println(a);
+System.out.print("Без учетом регистра "); -> С учетом регистра false
+a=s.equalsIgnoreCase(s1);
+System.out.println(a) -> Без учетом регистра true
+    Преобразование простых типов в строковые: метод valueOf()(явный способ) и + (слияние строк = неявный способ).
+Преобразование в строку значений любых типов.
+s=String.valueOf(true);
+System.out.println("boolean: " + s);
+s=String.valueOf((byte)0xFF);
+System.out.println("byte: " + s);
+s=String.valueOf('a');
+System.out.println("char: " + s);
+s=String.valueOf((short)99);
+System.out.println("short: " + s);
+s=String.valueOf(1023);
+System.out.println("int: " + s);
+s=String.valueOf(92489L);
+System.out.println("long: " + s);
+s=String.valueOf(6.57F);
+System.out.println("float: " + s);
+s=String.valueOf(6.57D);
+System.out.println("double: " + s);
+    Проверка содержимого строки: метод isEmpty (). Принимает значения: true или false
+String s= "";
+if (s.isEmpty()){System.out.println("Нет значения");
+} else {System.out.println(s);}
+    Разбиение строки на массив строк: метод split ().
+String s = "мама мыла раму";
+String s1[] = s.split("");
+int a = s.length();
+for (int i=0; i<a;i++){System.out.println("s1["+i+"]="+s1[i]);}
+    Преобразование целого числа в строку и обратно: методы класса Integer - parseInt() и toString().
+System.out.println("Строка в целое число:");
+String s = "101";
+int intvalue = Integer.parseInt(s);
+System.out.println(intvalue);
+System.out.println("Целое число в строку:");
+int intv = 121;
+String sv = Integer.toString(intv);
+System.out.println(sv);
+
+*****
+
+*****Frame
+1. import javax.swing.JFrame;
+public class Frame {
+	public static void main (String args[]){
+		Frame3 r = new Frame3("Дорога");
+		r.setVisible(true);
+		r.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		r.setSize(300,200);
+		r.setResizable(false);
+		r.setLocationRelativeTo(null);
+	}
+}
+
+2. //import javax.swing.*;
+//import java.awt.*;
+//import java.awt.event.*;
+
+//public class Frame2 extends JFrame{
+	//JButton b1, b2;
+	//JLabel l1, l2, l3, l4;
+	//JTextField t1, t2;
+	//int i, k;
+	//String a, b;
+	
+		//public Frame2(String s){
+		//super(s);
+		//setLayout(new FlowLayout());
+		//b1 = new JButton("Очистить");
+		//b2 = new JButton("Посчитать");
+		//l1 = new JLabel("Введите первое число:");
+		//l2 = new JLabel("Введите второе число:");
+		//l3 = new JLabel("");
+		//l4 = new JLabel("");
+		//t1 = new JTextField(10);
+		//t2 = new JTextField(10);
+		//add(b1);
+		//add(b2);
+		//add(l1);
+		//add(t1);
+		//add(l2);
+		//add(t2);
+		//add(l3);
+		//add(l4);
+		//}
+//}
+
+3. public class Frame3 extends JFrame{
+	JButton b1, b2;
+	JLabel l1, l2, l3, l4;
+	JTextField t1, t2;
+	int i, k;
+	String a, b;
+	eHandler handler = new eHandler();
+	
+		public Frame3(String s){
+		super(s);
+		setLayout(new FlowLayout());
+		b1 = new JButton("Очистить");
+		b2 = new JButton("Посчитать");
+		l1 = new JLabel("Введите первое число:");
+		l2 = new JLabel("Введите второе число:");
+		l3 = new JLabel("");
+		l4 = new JLabel("");
+		t1 = new JTextField(10);
+		t2 = new JTextField(10);
+		add(t1);
+		add(l1);
+		add(t2);
+		add(l2);
+		add(b2);
+		add(b1);
+		add(l3);
+		add(l4);
+		b2.addActionListener(handler);
+		b1.addActionListener(handler);
+		
+		}
+				public class eHandler implements ActionListener {
+			public void actionPerformed(ActionEvent e) {
+			if (e.getSource()==b2){
+				i = Integer.parseInt(t1.getText());
+				k = Integer.parseInt(t2.getText());
+				i=i+1;
+				k++;
+				a = "Ваше первое число равно "+i;
+				b = "Ваше второе число равно "+k;
+				l3.setText(a);
+				l4.setText(b);
+				
+			if (e.getSource()==b1){
+				t1.setText(null);
+				t2.setText(null);
+				l3.setText(null);
+				l4.setText(null);
+			}
+			}
+		}
+	}
+}
+*****
+
+*****Ввод с клавиатуры с использванием класса Scanner.
+Пример:
+import java.util.Scanner;
+public class Input {
+	public static void main(String[] args) {
+		Scanner i=new Scanner(System.in);
+		System.out.println("Введите текст");
+		String x=i.nextLine();//Ввод строк
+		System.out.println("текст "+x);
+		System.out.println("Введите целое число");
+		int z=i.nextInt(); //Ввод целого числа
+		System.out.println("число "+z);
+	}
+}
+*****
+
+*****Поиск элемента массива
+public class Array_Finder {
+	public static void main(String[] args) {
+	char[] arr={'a','b','c','d','e'};
+	char af='c';
+		for (int i=0; i<=arr.length; i++){
+			System.out.println (i);
+			char elem=arr[i];
+			if (elem==af){
+				System.out.println ();
+				System.out.print("искомый элемент массива равен "+i);
+				break;
+			}
+			System.out.println ("выполнена обработка элемента №"+i);
+		}
+	}
+}
+
+*****
+
+*****Перегрузка методов (Overload)
+	Несколько методов одного класса могут иметь одно и то же имя, отличаясь лишь набором параметров. 
+	Перегрузка методов один из способоа полиморфизма в Java (один интерфейс - множество методов).
+	Для перезагрузки метода, достаточно лишь объявить его новый вариант, отличающийся от уже существующих. 
+	Необходимо соблюсти одно условие: тип и/или число параметров в каждом из перезагружаемых методов должны быт разными (отличия возвращаемых типов недостаточно для перегрузки метода)
+	
+ПРИМЕР: перегрузка метода "ovl" 4 раза. 	
+	class Overload {
+    void ovl (){ // версия метода без параметров
+        System.out.println("ovl без параметров");
+    }
+    void ovl (int a){// версия с 1-м параметром
+        System.out.println("ovl с одним параметром: int a="+a);
+    }
+    int ovl (int a, int b){// версия с 2-мя параметрами
+        System.out.println("ovl с 2-мя параметрами: int a="+a+" и int b="+b);
+        return a+b;
+    }
+    double ovl (double a, double b){//версия с 2-мя параметрами
+        System.out.println("ovl с 2-мя параметрами: double a="+a+" и double b="+b);
+        return a+b;
+    }
+}
+
+public class MethodOverload {
+    public static void main(String[] args) {
+        Overload obj = new Overload();
+        int resInt;
+        double resDouble;
+
+        System.out.println("Вызываем методы по очереди");
+
+        obj.ovl();
+
+        System.out.println();
+        obj.ovl(5);
+
+        System.out.println();
+        resInt = obj.ovl(10,73);
+        System.out.println("Результат вызова метода obj.ovl(10,73) ="+resInt);
+
+        System.out.println();
+        resDouble = obj.ovl(1.5,3.14);
+        System.out.println("Результат вызова метода obj.ovl(1.5,3.14) ="+resDouble);
+    }
+}
+*****
+
+*****Перегрузка конструкторов (Overload)
+	Перегрузка конструкторов позволяет конструировать объекты самыми разными способами.
+	Во всех перегруженных версиях конструктор строится по разному. 
+	Конкретный тип конструктора выбирается на основании переметров, которые указываются при выполнени оператора new.
+		
+ПРИМЕР:
+class  MyClass{
+    int x;
+
+    MyClass(){
+        System.out.println("Внутри MyClass().");
+        x=0;
+    }
+
+    MyClass(int i){
+        System.out.println("Внутри MyClass(int).");
+        x=i;
+    }
+
+    MyClass(double d){
+        System.out.println("Внутри MyClass(double).");
+        x=(int)d;
+    }
+
+    MyClass(int i, int j){
+        System.out.println("Внутри MyClass(int, int).");
+        x=i*j;
+    }
+}
+
+public class OverloadConstructor {
+    public static void main(String[] args) {
+        MyClass t1 = new MyClass();
+        MyClass t2 = new MyClass(77);
+        MyClass t3 = new MyClass(3.14);
+        MyClass t4 = new MyClass(5,8);
+
+        System.out.println("t1.x: "+t1.x);
+        System.out.println("t2.x: "+t2.x);
+        System.out.println("t3.x: "+t3.x);
+        System.out.println("t4.x: "+t4.x);
+    }
+}
+*****
+
+*****Swap двух чисел
+public class Swap {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = -10;
+        System.out.print("Исходные переменные до замены:");
+        System.out.println(" a=" + a + "; b=" + b);
+        Swap4 s = new Swap4(a, b);
+        s.change(s);
+        System.out.print("Переменные после замены через объект:");
+        System.out.println(" a=" + s.a + "; b=" + s.b);
+        int tmp = a;
+        a = b;
+        b = tmp;
+        System.out.print("Переменные после замены в самом классе:");
+        System.out.println(" a=" + a + "; b=" + b);
+    }
+}
+class Swap4 {
+    int a, b;
+
+    Swap4(int i, int j) {
+        a = i;
+        b = j;
+    }
+    void change(Swap4 s) {
+        int tmp = s.a;
+        s.a = s.b;
+        s.b = tmp;
+    }
+}
+
+*****

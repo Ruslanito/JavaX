@@ -1,4 +1,4 @@
-package com.ruslanito.Core.Core_Arrays;
+package com.ruslanito.Core.Core_Collection;
 
 import java.util.ArrayList;
 

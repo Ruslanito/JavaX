@@ -8,7 +8,7 @@ import java.util.ArrayList;
 В начало списка
 */
 
-public class ColAddToTheBeginning {
+public class ArrayListAddToTheBeginning {
     public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<String>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

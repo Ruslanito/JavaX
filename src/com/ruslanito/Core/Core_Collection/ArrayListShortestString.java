@@ -9,7 +9,7 @@ import java.util.ArrayList;
 Выражаемся покороче
 */
 
-public class Col_ShortestString {
+public class ArrayListShortestString {
     public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<>();
         BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));

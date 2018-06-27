@@ -9,7 +9,7 @@ import java.util.List;
 Самая длинная строка
 */
 
-public class Col_BiggestString {
+public class ArrayListBiggestString {
     private static List<String> strings;
 
     public static void main(String[] args) throws Exception {

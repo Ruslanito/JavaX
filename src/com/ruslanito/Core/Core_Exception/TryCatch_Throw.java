@@ -1,4 +1,4 @@
-package com.ruslanito.Core.Core_Exeption;
+package com.ruslanito.Core.Core_Exception;
 
 public class TryCatch_Throw {
 

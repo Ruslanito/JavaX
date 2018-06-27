@@ -1,5 +1,7 @@
 package com.ruslanito.Core.Core_String_Char;
 
+//Вычисление времени работы String concatination +=
+
 public class String_StringConcat1
 {
     private static long time;
@@ -9,7 +11,7 @@ public class String_StringConcat1
 
         saveTime();
         String s = "Привет";
-        for(int i = 0; i < 100000; ++i)
+        for(int i = 0; i < 10000; ++i)
         {
             s+=i;
         }

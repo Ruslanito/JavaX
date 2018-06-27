@@ -1,5 +1,7 @@
 package com.ruslanito.Core.Core_String_Char;
 
+//вычисление времени работы StringBuilder
+
 public class String_StringConcat2
 {
     private static long time;
@@ -9,7 +11,7 @@ public class String_StringConcat2
 
         saveTime();
         StringBuilder sb = new StringBuilder("Привет");
-        for(int i = 0; i < 100000; ++i)
+        for(int i = 0; i < 10000; ++i)
         {
             sb.append(i);
         }

@@ -3,6 +3,8 @@ package com.ruslanito.Core.Core_Collection;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//добавление элемента в список
+
 public class ArrayList1 {
 	public static void main(String[] args) {
 		ArrayList<Integer> arr;

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //добавление элемента в список
 
-public class ArrayList1 {
+public class ArrayListInput1 {
 	public static void main(String[] args) {
 		ArrayList<Integer> arr;
 		arr = new ArrayList();

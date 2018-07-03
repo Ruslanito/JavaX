@@ -1,6 +1,6 @@
 package com.ruslanito.Core.Core_Collection;
 
-//список разбиваем на три списка и печатаем
+//список разбиваем на три списка (делятся на 3, деляься на 2, все сотвльные) и печатаем
 
 import java.io.BufferedReader;
         import java.io.InputStreamReader;
@@ -9,7 +9,8 @@ import java.io.BufferedReader;
 
 public class ArrayListToThreeArrayList {
     public static void main(String[] args) throws Exception {
-        ArrayList<Integer> list1 = new ArrayList();
+        //объявляем и инициалищзируем главный список
+        ArrayList <Integer> list1 = new ArrayList<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int x = 0;
 
@@ -18,11 +19,13 @@ public class ArrayListToThreeArrayList {
             int num = Integer.parseInt(str);
             list1.add(num);
         }
+        //объявляем списки
 
         ArrayList<Integer> listMod3 = new ArrayList();
         ArrayList<Integer> listMod2 = new ArrayList();
         ArrayList<Integer> list2 = new ArrayList();
 
+        // иницициализируем списки
         for (int i = 0; i < list1.size(); i++) {
 
             x = list1.get(i);
@@ -41,6 +44,7 @@ public class ArrayListToThreeArrayList {
             }
         }
 
+        //печатем списки
         printList(listMod3);
         printList(listMod2);
         printList(list2);

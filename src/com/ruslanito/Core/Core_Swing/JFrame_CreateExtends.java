@@ -7,6 +7,7 @@ import javax.swing.*;
  */
 public class JFrame_CreateExtends extends JFrame{
     public static void main(String[] args) {
+
         JFrame_CreateExtends f = new JFrame_CreateExtends();
     }
         // создаём конструктор с параметрами окна

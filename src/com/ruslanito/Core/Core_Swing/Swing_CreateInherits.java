@@ -5,14 +5,14 @@ import javax.swing.*;
 /**
  * Created by Ruslanito on 25.02.2017.
  */
-public class Swing_CreateExtends extends JFrame{
+public class Swing_CreateInherits extends JFrame{
     JFrame fr;
     public static void main(String[] args) {
-        new Swing_CreateExtends();
+        new Swing_CreateInherits();
 
     }
         // создаём конструктор с параметрами окна
-    Swing_CreateExtends(){
+    Swing_CreateInherits(){
         int a=300;
         int b=300;
         setSize(a,b);

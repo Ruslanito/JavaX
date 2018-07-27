@@ -1,4 +1,4 @@
-package com.ruslanito.Core.Core_Swing;
+package com.ruslanito.Core.Swing;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.awt.*;
 public class Swing_CreateSimplyExtendsCenter {
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("JFrameExtand"){};
+        JFrame frame = new JFrame("JFrameAllwaysCentered"){};
 
 //        frame.setSize(500,500);//dimensions of frame
 //        frame.setLocation(150,300);//start points of frame's left top corner

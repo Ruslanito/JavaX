@@ -1,4 +1,4 @@
-package com.ruslanito.Core.Swing;
+package com.ruslanito.Core.Swing.SwingCreate;
 
 import javax.swing.*;
 

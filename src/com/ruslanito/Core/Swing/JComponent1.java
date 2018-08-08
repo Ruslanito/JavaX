@@ -6,6 +6,8 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /*C:\Users\Ruslan\IdeaProjects\JavaX\src\com\ruslanito\Core\Swing\SwingCreate\Swing_CreateMethod.java*/
 
@@ -57,6 +59,19 @@ public class JComponent1 {
             g2.draw(rec);
 
 //image
+            /*try {
+                URL url = new URL("http:/...../star.png");
+                Image image = new ImageIcon(url).getImage();
+                g2.drawImage(image, 220, 50, null);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            OR
+                Image image = new ImageIcon(img/star.png).getImage();
+                g2.drawImage(image, 220, 50, null);
+
+            */
+
 
 
 
